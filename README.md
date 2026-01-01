@@ -29,6 +29,7 @@ Home Credit provides consumer loans to people with little or no traditional cred
 - **Python** or **R** for data analysis and modeling.  Your choice. You should use the programming language that you are best able to read and evaluate.
 - **GitHub** for version control and portfolio hosting. You will also publish your decision support app to GitHub pages.
 - **Positron IDE** with **Databot** and **Positron Assistant** for AI-assisted coding and exploration.
+- **Quarto** for reproducible reporting that mixes code, output, and narrative using R and Python interchangeably.
 
 ---
 
