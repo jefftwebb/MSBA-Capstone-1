@@ -1,0 +1,263 @@
+---
+title: "Configure Positron"
+format: 
+  revealjs:
+    slide-number: c/t
+    progress: true
+    history: true
+    hash: true
+    navigation-mode: linear
+    controls: false
+    transition: fade
+    background-transition: none
+---
+
+## Agenda
+
+- Tour Positron: layout, sidebar, terminal vs console
+- Clone your repo from GitHub
+- Set up `.gitignore` and `.gitkeep`
+- Understand Markdown (`.md`) files
+- Configure GitHub Copilot
+- Edit project README, commit, push
+
+---
+
+# Tour of Positron {.center}
+
+## Positron Layout
+
+![](images/positron_layout.png){fig-align="center" width="85%"}
+
+
+## Terminal vs Console
+
+| | Terminal | Console |
+|---|----------|---------|
+| Runs | OS commands | Python or R code |
+| Language | Bash/shell | Python/R |
+| Example | `ls -lh data/` | `df.head()` |
+| Use for | File management, Git | Data analysis |
+
+Open Terminal: View → Terminal (or `` Ctrl+` ``)
+
+## Terminal Basics
+
+```{.bash}
+# Where am I?
+pwd
+
+# What's in this folder?
+ls
+
+# What's in data/ and how big are the files?
+ls -lh data/
+
+# Change directory
+cd src/
+```
+
+## Variables Pane & Data Explorer
+
+**Variables Pane** (right side): shows all objects in memory—dataframe names, dimensions, types. Click the table icon to open Data Explorer.
+
+**Data Explorer**: spreadsheet-like view of your data. Sort, filter, browse without writing code.
+
+---
+
+# Clone from GitHub {.center}
+
+## Clone Your Repository
+
+1. Copy your repo URL from GitHub (green Code button → HTTPS)
+
+2. In Positron: File → New Window
+
+3. Click Clone Git Repository
+
+4. Paste URL, choose local folder
+
+5. Click Open when prompted
+
+---
+
+# Version Control Setup {.center}
+
+## Why .gitignore?
+
+Commit code, not outputs.
+
+| Commit | Do NOT Commit |
+|--------|---------------|
+| `src/preprocess.py` | `data/raw/*.csv` |
+| `src/model.py` | `data/processed/*.parquet` |
+| `docs/eda_report.md` | `models/*.pkl` |
+
+Data files are large (2.68 GB for Home Credit). Anyone can regenerate outputs from your code. GitHub has file size limits.
+
+## The .gitignore File
+
+Create `.gitignore` in your project root:
+
+```{.bash}
+# Data files
+data/raw/*.csv
+data/raw/*.parquet
+data/processed/*
+
+# Model artifacts
+models/*.pkl
+models/*.joblib
+
+# Submissions
+submissions/*.csv
+
+# Keep empty folders
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/.gitkeep
+!submissions/.gitkeep
+```
+
+## What is .gitkeep?
+
+Git doesn't track empty folders. Add a `.gitkeep` file to preserve folder structure.
+
+```{.bash}
+touch data/raw/.gitkeep
+touch data/processed/.gitkeep
+touch models/.gitkeep
+touch submissions/.gitkeep
+```
+
+The `!` in `.gitignore` means "except this file."
+
+---
+
+# Markdown Basics {.center}
+
+## What is Markdown?
+
+Markdown (`.md`) is a text format that renders nicely. `README.md` displays as your repo's homepage on GitHub.
+
+```{.markdown}
+# Heading 1
+## Heading 2
+
+**bold text**
+*italic text*
+
+- bullet point
+- another bullet
+
+1. numbered item
+2. another item
+```
+
+## Your README.md
+
+```{.markdown}
+# Home Credit Default Risk
+
+## Overview
+Predicting loan default risk for Home Credit Group.
+Kaggle competition for MSBA Capstone, Spring 2026.
+
+## Author
+[Your Name] – MS Business Analytics, University of Utah
+```
+
+You'll expand this throughout the semester.
+
+---
+
+# GitHub Copilot {.center}
+
+## Prerequisites
+
+You should already have:
+
+- GitHub account (from Week 1)
+- GitHub Copilot access via GitHub Education
+
+Verify at [github.com/settings/copilot](https://github.com/settings/copilot)
+
+If not active, apply at [education.github.com](https://education.github.com/)
+
+## Enable Positron Assistant
+
+1. Command Palette: `Ctrl+Shift+P` (Win) or `Cmd+Shift+P` (Mac)
+2. Type: `Preferences: Open Settings (UI)`
+3. Search: `positron.assistant.enable`
+4. Check the box
+
+Restart Positron (or Command Palette → `Developer: Reload Window`)
+
+## Connect GitHub Copilot
+
+1. Command Palette: `Ctrl+Shift+P`
+2. Type: `Positron Assistant: Configure Language Model Providers`
+3. Select GitHub Copilot
+4. Click Sign in
+5. Complete authentication in browser
+
+## Verify It Works
+
+Test inline completions:
+
+1. Create `test.py`
+2. Type: `# function to calculate the mean of a list`
+3. Press Enter, wait for suggestion
+4. Press Tab to accept
+
+Test chat: click Assistant icon, ask a question.
+
+---
+
+# Git Workflow {.center}
+
+## Edit → Commit → Push
+
+```
+EDIT     Make changes to files
+   ↓
+STAGE    Select changes to include
+   ↓
+COMMIT   Save snapshot with message
+   ↓
+PUSH     Upload to GitHub
+```
+
+## Git in Positron
+
+| Action | How |
+|--------|-----|
+| See changes | Source Control pane shows modified files |
+| Stage | Click `+` next to file |
+| Commit | Type message, click checkmark |
+| Push | Click `...` menu → Push |
+
+Good commit message:
+
+```
+Week 2: Update README with project overview
+```
+
+---
+
+# Assignment {.center}
+
+## GitHub Setup
+
+Due: Sunday 11:59 PM
+
+1. Clone your `home-credit-project` repo
+2. Create `.gitignore` with template provided
+3. Edit `README.md` with project title, description, your name
+4. Commit and push
+5. Submit README URL in Canvas
+
+URL format: `https://github.com/username/home-credit-project/blob/main/README.md`
+
+##
+

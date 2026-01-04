@@ -1,0 +1,192 @@
+---
+title: "Tool Setup"
+format: 
+  revealjs:
+    theme: default
+    transition: fade
+    slide-number: c/t
+    progress: true
+    history: true
+    center: false
+    controls: false
+    width: 1050
+    height: 700
+---
+
+## Agenda
+
+- Create GitHub account and repository
+- Create Kaggle account
+- Get ChatGPT EDU access
+- Install Positron IDE
+- Install Python and R
+- Test your language installations
+
+---
+
+# GitHub {.center}
+
+## What is GitHub?
+
+GitHub is the industry standard for cloud-based version control and portfolio hosting. It allows you to:
+
+- Track changes to your code over time (and revert if needed)
+- Showcase your projects to potential employers
+- Collaborate with others (for the next capstone)
+
+GitHub uses Git, a distributed version control system created by Linus Torvalds (creator of Linux).
+
+## Basic GitHub Structure
+
+- **Repository** (AKA "repo"): A master project folder containing all files/folders and history
+- **Commit**: A snapshot of changes made to files in the repository
+- **README**: A markdown file (.md) that describes the project (or portions of it)
+
+Many deliverables in this course will be README files hosted in your project repo.
+
+## Set Up GitHub Account
+
+1. Go to [github.com](https://github.com)
+2. Click "Sign up"
+3. Use your university email address so you will be eligible for a free GitHub Pro account
+4. Choose a professional username (visible to employers)
+5. Verify your email address
+
+Next week we will link Positron and Github. This will allow you to work locally in Positron and "push" changes to GitHub.
+
+## Create GitHub Repo
+
+1. After logging in, click the "+" icon in the top-right corner
+2. Select "New repository"
+3. Name the repository: e.g, `home-credit-project`
+4. Add a README file
+5. Click "Create repository"
+
+Later you will create a folder structure within this main project repo. Each folder will have a README describing its contents.
+
+---
+
+# Kaggle {.center}
+
+## Set Up Kaggle Account
+
+Kaggle hosts the Home Credit competition dataset and provides a platform to test your model performance against a hold out set.
+
+1. Go to [kaggle.com](https://www.kaggle.com)
+2. Sign up with your email
+3. Complete your profile
+4. Navigate to [Home Credit Default Risk Competition](https://www.kaggle.com/competitions/home-credit-default-risk)
+5. Accept the competition rules
+
+Note: Do not download the datasets yet
+
+---
+
+# ChatGPT {.center}
+
+## ChatGPT EDU Access
+
+You have free access to ChatGPT through the University of Utah. We will use it for research and document drafting.
+
+- Read [ChatGPT EDU Getting Started](https://ai.utah.edu/tools/chatgpt/get-started.php)
+- Follow the university's authentication process
+- Verify you can access ChatGPT
+
+---
+
+# Positron IDE {.center}
+
+## Why Positron?
+
+Positron is Posit's successor to RStudio, designed for AI-assisted data science workflows. It is fork of VS Code.
+
+- Integrates AI tools for coding assistance
+- Supports both R and Python through Quarto notebooks
+- Seamlessly works with GitHub for version control
+- Purpose built for data science (occupies a unique niche)
+
+## Positron Installation - macOS
+
+1. Go to [positron.posit.co/install.html](https://positron.posit.co/install.html)
+2. Download the latest version for macOS
+3. Open the `.dmg` file and drag Positron to Applications
+4. Launch Positron from Applications
+
+## Positron Installation - Windows
+
+1. Go to [positron.posit.co/install.html](https://positron.posit.co/install.html)
+2. Download the latest version for Windows
+3. Run the installer `.exe` file
+4. Follow the installation wizard
+5. Launch Positron from the Start menu
+
+## Positron AI
+
+Positron has two main AI tools:
+
+- **Databot**: EDA partner for rapid data exploration
+- **Positron Assistant**: coding partner for other data science tasks
+
+These tools depend on large language models (LLMs) hosted by third-party providers. You need to specify which LLM you want to use.
+
+## Language Model Options
+
+- GitHub Copilot (free)
+- Anthropic Claude (Sonnet 4.5; paid, possibly best performance). Cost estimate: $20 for the project.
+- Cline (free or paid options). This is a VS Code extension.
+
+[Setup Guide](https://positron.posit.co/assistant-getting-started.html)
+
+Advice: Start with GitHub Copilot and change later if needed. We will demo the setup in class next week.
+
+---
+
+# Python and R Setup {.center}
+
+## Python Setup
+
+1. Go to [docs.python.org/3/using/index.html](https://docs.python.org/3/using/index.html)
+2. Download Python 3.10 or higher for your operating system
+3. Run the installer
+   - **Windows**: Check "Add Python to PATH"
+   - **macOS**: Use the `.pkg` installer
+
+## R Setup
+
+1. Go to [r-project.org](https://www.r-project.org/)
+2. Click "Download R"
+3. Select a CRAN mirror (any US mirror works)
+4. Download R for your operating system
+5. Run the installer
+
+## Test Your Setup - Python
+
+Create a new file in Positron and run:
+
+```{python}
+#| echo: true
+#| eval: false
+import sys
+import pandas as pd
+import numpy as np
+
+print(f"Python version: {sys.version}")
+print(f"Pandas version: {pd.__version__}")
+print(f"NumPy version: {np.__version__}")
+print("✓ Python setup successful!")
+```
+
+## Test Your Setup - R
+
+Create a new file in Positron and run:
+
+```{r}
+#| echo: true
+#| eval: false
+#| 
+library(tidyverse)
+
+cat("R version:", R.version.string, "\n")
+cat("Tidyverse loaded successfully\n")
+cat("✓ R setup successful!\n")
+```
