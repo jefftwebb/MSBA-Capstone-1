@@ -1,5 +1,6 @@
 ---
 title: "Tool Setup"
+subtitle: "MSBA Capstone 1"
 format: 
   revealjs:
     theme: default
@@ -22,13 +23,13 @@ format:
 - Install Python and R
 - Test your language installations
 
----
+
 
 # GitHub {.center}
 
 ## What is GitHub?
 
-GitHub is the industry standard for cloud-based version control and portfolio hosting. It allows you to:
+GitHub is the industry standard for cloud-based version control, file backup, and portfolio hosting. It allows you to:
 
 - Track changes to your code over time (and revert if needed)
 - Showcase your projects to potential employers
@@ -38,7 +39,7 @@ GitHub uses Git, a distributed version control system created by Linus Torvalds 
 
 ## Basic GitHub Structure
 
-- **Repository** (AKA "repo"): A master project folder containing all files/folders and history
+- **Repository** (AKA "repo"): A master project folder containing all files/folders and history for a project
 - **Commit**: A snapshot of changes made to files in the repository
 - **README**: A markdown file (.md) that describes the project (or portions of it)
 
@@ -48,7 +49,7 @@ Many deliverables in this course will be README files hosted in your project rep
 
 1. Go to [github.com](https://github.com)
 2. Click "Sign up"
-3. Use your university email address so you will be eligible for a free GitHub Pro account
+3. Use your university email address so you will be eligible later for a free GitHub Pro account (if you want)
 4. Choose a professional username (visible to employers)
 5. Verify your email address
 
@@ -59,12 +60,11 @@ Next week we will link Positron and Github. This will allow you to work locally 
 1. After logging in, click the "+" icon in the top-right corner
 2. Select "New repository"
 3. Name the repository: e.g, `home-credit-project`
-4. Add a README file
+4. Check the box to add a README file
 5. Click "Create repository"
 
-Later you will create a folder structure within this main project repo. Each folder will have a README describing its contents.
+Later you will create folders within this main project repo. Each folder will have a README describing its contents.
 
----
 
 # Kaggle {.center}
 
@@ -90,7 +90,7 @@ You have free access to ChatGPT through the University of Utah. We will use it f
 
 - Read [ChatGPT EDU Getting Started](https://ai.utah.edu/tools/chatgpt/get-started.php)
 - Follow the university's authentication process
-- Verify you can access ChatGPT
+- Verify you can access you ChatGPT EDU account
 
 ---
 
@@ -125,14 +125,14 @@ Positron is Posit's successor to RStudio, designed for AI-assisted data science 
 Positron has two main AI tools:
 
 - **Databot**: EDA partner for rapid data exploration
-- **Positron Assistant**: coding partner for other data science tasks
+- **Positron Assistant**: coding partner for other data science tasks (in ask, agent, edit and plan modes)
 
 These tools depend on large language models (LLMs) hosted by third-party providers. You need to specify which LLM you want to use.
 
 ## Language Model Options
 
 - GitHub Copilot (free)
-- Anthropic Claude (Sonnet 4.5; paid, possibly best performance). Cost estimate: $20 for the project.
+- Anthropic Claude (paid, possibly best performance). Cost estimate: $20 for the project with Sonnet 4.5.
 - Cline (free or paid options). This is a VS Code extension.
 
 [Setup Guide](https://positron.posit.co/assistant-getting-started.html)
