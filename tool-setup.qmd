@@ -60,8 +60,13 @@ Next week we will link Positron and Github. This will allow you to work locally 
 1. After logging in, click the "+" icon in the top-right corner
 2. Select "New repository"
 3. Name the repository: e.g, `home-credit-project`
-4. Check the box to add a README file
-5. Click "Create repository"
+4. Add a description if you want (you will add to this over time)
+5. Choose "Public" visibility
+6. Add a README file
+7. No .gitignore for now
+8. No license for now
+9. Click "Create repository"
+
 
 Later you will create folders within this main project repo. Each folder will have a README describing its contents.
 
@@ -133,13 +138,20 @@ These tools depend on large language models (LLMs) hosted by third-party provide
 
 - GitHub Copilot (free)
 - Anthropic Claude (paid, possibly best performance). Cost estimate: $20 for the project with Sonnet 4.5.
-- Cline (free or paid options). This is a VS Code extension.
+- Cline (free or paid options). This is a VS Code extension (all of which work in Positron).
 
 [Setup Guide](https://positron.posit.co/assistant-getting-started.html)
 
 Advice: Start with GitHub Copilot and change later if needed. We will demo the setup in class next week.
 
----
+## Copilot Access
+
+- Sign in to GitHub
+- In another tab search for (or open) the Copilot plans page: [https://github.com/features/copilot/plans](https://github.com/features/copilot/plans)
+- Choose the Free option.  Click "Get Started." 
+- Authorize Copilot for your GitHub account
+
+Even better:  As a student, you can get Copilot Pro for free.  See [https://education.github.com/pack](https://education.github.com/pack) for details.
 
 # Python and R Setup {.center}
 

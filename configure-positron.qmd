@@ -60,15 +60,13 @@ cd src/
 
 ## Prerequisites
 
-You should already have:
+You should already have access to:
 
 - GitHub account (from Week 1)
-- GitHub Copilot access (free version), or:
-- Copilot Pro (free for students)
+- GitHub Copilot access (free version) or
+- GitHub Copilot Pro (free for students). Verify at [github.com/settings/copilot](https://github.com/settings/copilot). If not active, apply at [education.github.com](https://education.github.com/).
+- Some other language model (Claude, Cline)
 
-Verify at [github.com/settings/copilot](https://github.com/settings/copilot)
-
-If not active, apply at [education.github.com](https://education.github.com/)
 
 ## Demo: Configure Copilot 
 
@@ -122,11 +120,7 @@ Markdown is a text format that renders nicely. `README.md` displays as your repo
 ```
 
 
-
-
 # Assignment
-
-
 
 ## Revise README and Push to GitHub
 
