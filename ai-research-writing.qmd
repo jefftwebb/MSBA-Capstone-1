@@ -1,0 +1,328 @@
+---
+title: "AI-Assisted Research Writing"
+subtitle: "MSBA Capstone 1"
+format:
+  revealjs:
+    theme: default
+    transition: fade
+    slide-number: c/t
+    progress: true
+    history: true
+    center: false
+    width: 1050
+    height: 700
+---
+
+## Agenda
+
+- When AI helps and when it doesn't
+- Staged research approach
+- Building research documents
+- Verifying what AI tells you
+- Writing the problem statement
+- Assignment
+
+---
+
+# When AI Helps
+
+---
+
+## AI is good at
+
+| Task | Example |
+|------|---------|
+| Outlines | "What sections should a problem statement include?" |
+| Explanations | "What does loss given default mean?" |
+| Search terms | "What should I search for credit risk research?" |
+| Drafting from notes | Writing after you give it your research |
+| Revision | "Make this shorter" or "Add detail here" |
+
+---
+
+## AI is bad at
+
+| Task | Problem |
+|------|---------|
+| Current statistics | Training data is old |
+| Citations | Makes up sources that don't exist |
+| Recent events | Doesn't know what happened last month |
+| Niche facts | Confident but often wrong |
+
+**Use AI for structure. Verify facts yourself.**
+
+---
+
+# Staged Research
+
+---
+
+## The problem with one prompt
+
+Ask AI to "write a business problem statement for Home Credit" and you get:
+
+- Guessed statistics
+- Made-up sources
+- Missing regulatory context
+- Generic content
+
+It looks professional. It may be wrong.
+
+---
+
+## Build context first
+
+| Stage | Document | Time |
+|-------|----------|------|
+| 1 | Domain research (industry facts) | 20-30 min |
+| 2 | Company research (Home Credit) | 15-20 min |
+| 3 | Genre research (what a problem statement looks like) | 10-15 min |
+| 4 | Verify all statistics | 15-20 min |
+| 5 | Draft with all context attached | 20-30 min |
+
+Total: ~90 minutes
+
+---
+
+# Building Research Documents
+
+---
+
+## Two laws you need to know
+
+| Law | Full name | Requirement |
+|-----|-----------|-------------|
+| ECOA | Equal Credit Opportunity Act | Give specific reasons when denying credit |
+| FCRA | Fair Credit Reporting Act | Tell people what factors hurt their score |
+
+Your model must be explainable. "The algorithm said no" is not legal.
+
+---
+
+## The CFPB's position
+
+> "Companies are not absolved of their legal responsibilities when they let a black-box model make lending decisions."
+> — CFPB Director Rohit Chopra, 2022
+
+You must be able to explain why someone was denied.
+
+---
+
+## Domain research: what to find
+
+Record statistics in a table you can verify:
+
+| Statistic | Value | Source | Verified |
+|-----------|-------|--------|----------|
+| Credit invisible (2020) | 7 million (2.7%) | CFPB Technical Correction 2025 | Yes |
+| Unscorable (2020) | 25.3 million (9.8%) | CFPB Technical Correction 2025 | Yes |
+| Delinquency rate (Q3 2024) | 3.5% | NY Fed Household Debt Report | Yes |
+
+---
+
+## Watch out: the CFPB correction
+
+| Report | Credit invisible estimate | Status |
+|--------|---------------------------|--------|
+| 2015 original | 26 million (11%) | Wrong — data error |
+| 2025 correction | 7 million (2.7%) | Correct |
+
+The old number is everywhere online. AI will cite it. Use the corrected number.
+
+---
+
+## Company research: Home Credit facts
+
+| Item | Value | Source |
+|------|-------|--------|
+| Founded | 1997 | Company website |
+| Customers served | 144+ million (cumulative) | LinkedIn 2024 |
+| Target customers | People with little/no credit history | Company mission |
+| Countries | 9 (as of 2024) | Company website |
+| Approach | Uses phone and transaction data for credit decisions | Kaggle competition |
+
+---
+
+## Genre research: problem statement structure
+
+Ask AI what sections a problem statement should have:
+
+| Section | Content |
+|---------|---------|
+| Business context | Company, market, why this matters |
+| Problem definition | What decision needs to be made |
+| Success criteria | How you'll measure success |
+| Constraints | Regulatory limits, data limits |
+| Scope | What's included and excluded |
+
+Aim for 1-2 pages.
+
+---
+
+## Style guide
+
+Already in your repo: `docs/style_guide.md`
+
+- Audience: Faculty and future employers
+- Tone: Professional, not stiff
+- Format: Paragraphs for analysis, bullets only for lists
+- Length: 1-2 pages for problem statement
+
+Attach this file when asking AI to draft.
+
+---
+
+# Verifying AI Output
+
+---
+
+## Verification checklist
+
+For every statistic you plan to use:
+
+1. Click the URL — does the page exist?
+2. Find the number — is it actually there?
+3. Check the date — is this the most recent version?
+4. Read the context — any corrections or caveats?
+5. Cross-reference — do other sources agree?
+
+If you can't verify it, don't use it.
+
+---
+
+## Warning signs
+
+| Sign | Example | Response |
+|------|---------|----------|
+| Specific number, no source | "Default rate is 7.3%" | Ask for source |
+| Citation doesn't exist | Paper not found in search | Don't use |
+| Too convenient | Exactly answers your question | Verify independently |
+| Round numbers | "About 50%" | Find the real figure |
+
+---
+
+## Better prompts for research
+
+Weak:
+
+```
+What are typical default rates for consumer loans?
+```
+
+Better:
+
+```
+Search for consumer loan delinquency rates from the 
+Federal Reserve or CFPB. 
+
+Cite specific sources with URLs. I will verify these.
+```
+
+"I will verify" changes how AI responds.
+
+---
+
+# Writing the Problem Statement
+
+---
+
+## Business framing vs technical framing
+
+| Technical | Business |
+|-----------|----------|
+| Improve AUC from 0.75 to 0.80 | Reduce losses by $X million |
+| Handle 8% positive class | Account for rare but costly defaults |
+| Feature engineering | Use alternative data to reach underserved customers |
+| Model interpretability | Provide required denial reasons |
+
+Lead with business value. Support with technical approach.
+
+---
+
+## Final drafting prompt
+
+```
+Write the business problem statement for Home Credit.
+
+ATTACHED:
+- Domain research (verified statistics)
+- Company research (Home Credit facts)  
+- Style guide (formatting)
+
+REQUIREMENTS:
+- Use only statistics I marked as verified
+- Mention ECOA requirement for denial explanations
+- Lead with business value
+- 1-2 pages
+- Follow style guide
+```
+
+---
+
+## Update your project context
+
+After drafting, add to `positron.md`:
+
+```markdown
+## Business Problem Summary
+Home Credit serves customers with limited credit history. 
+Goal: predict default while providing explainable decisions.
+
+## Key Constraints
+- Must provide denial reasons (ECOA)
+- ~32M Americans lack traditional credit scores
+- About 8% of loans default
+
+## Current Phase
+- [x] Problem statement
+- [ ] EDA
+```
+
+---
+
+# Assignment
+
+---
+
+## This week's deliverable
+
+Create `docs/problem_statement.md`
+
+| Phase | Tasks | Time |
+|-------|-------|------|
+| Research | Domain + company docs with sources | 35-50 min |
+| Verify | Click every link, confirm every number | 15-20 min |
+| Draft | Attach context, follow style guide | 20-30 min |
+| Commit | Push to GitHub | 5 min |
+
+---
+
+## Before you submit
+
+- All statistics have sources with URLs
+- ECOA mentioned (model must be explainable)
+- Business value stated
+- 1-2 pages
+- Follows `docs/style_guide.md`
+- `positron.md` updated
+- Committed to `docs/` folder
+
+---
+
+## Summary
+
+1. AI helps with structure — outlines, explanations, drafts
+2. AI fails with facts — verify everything yourself
+3. Build context first — research before drafting
+4. Record your sources — table with URLs
+5. Know the regulations — ECOA requires explainable decisions
+6. Frame for business — value first, technique second
+
+---
+
+## Resources
+
+- CFPB Credit Invisibles: consumerfinance.gov
+- NY Fed Household Debt: newyorkfed.org/microeconomics/hhdc
+- CFPB on algorithms: search "CFPB adverse action algorithms"
+- Style guide: `docs/style_guide.md` in your repo
